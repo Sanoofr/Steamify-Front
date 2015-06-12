@@ -1,0 +1,8 @@
+### JetBrains ## Directory-based project format:
+.idea/
+##Project ignore
+app/vendors/
+app/templates.js
+node_modules/
+dist/
+tmp/
