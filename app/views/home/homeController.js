@@ -1,4 +1,4 @@
 angular.module('Steamify').controller('HomeController',
-	function (HomeService){
-	}
+    function () {
+    }
 );
