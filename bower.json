@@ -2,12 +2,15 @@
   "name": "Steamify",
   "version": "0.1a",
   "dependencies": {
-    "angular-route": "1.4.0-rc.1",
-    "angular-i18n": "1.4.0-rc.1",
-    "angular-touch": "1.4.0-rc.1",
-    "angular-i18n": "1.4.0-rc.1",
-    "angular": "1.4.0-rc.1",
-    "angular-scroll": "0.6.5",
-    "angular-animate": "1.4.0-rc.1"
+    "angular": "~1.4.1",
+    "angular-route": "~1.4.1",
+    "angular-i18n": "~1.4.1",
+    "angular-touch": "~1.4.1",
+    "angular-animate": "~1.4.1",
+    "angular-bootstrap": "~0.13.0",
+    "bootstrap": "~3.3.5",
+    "animate.css": "~3.3.0",
+    "font-awesome": "~4.3.0",
+    "angular-scroll": "~0.7.1"
   }
 }

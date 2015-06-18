@@ -19,7 +19,7 @@ module.exports = function (grunt) {
             }
         },
         ngtemplates: {
-            website: {
+            Steamify: {
                 src: ['app/**/*.html'],
                 dest: 'app/templates.js',
                 standalone: true,
@@ -130,9 +130,20 @@ module.exports = function (grunt) {
             }
         },
         copy: {
-            bowerFiles: {
+            bowerCSS: {
                 src: [
-                    'tmp/components/**/*.min.js',
+                    'tmp/components/**/font-awesome.min.css',
+                    'tmp/components/**/bootstrap.min.css',
+                    'tmp/components/**/animate.min.css'
+                ],
+                dest: 'app/vendors/css/',
+                expand: true,
+                flatten: true,
+                filter: 'isFile'
+            },
+            bowerJS: {
+                src: [
+                    'tmp/components/angular*/*.min.js',
                     'tmp/components/angular-i18n/angular-locale_fr-fr.js'
                 ],
                 dest: 'app/vendors/js/',
@@ -166,7 +177,11 @@ module.exports = function (grunt) {
                 views: [
                     "app/views/home"
                 ],
-                directives: []
+                directives: [
+                    "app/components/steamHeader",
+                    "app/components/steamMenu",
+                    "app/components/steamFriends"
+                ]
             }
         }
     });
@@ -203,7 +218,8 @@ module.exports = function (grunt) {
 
     grunt.registerTask('bower-task', [
         "bower",
-        "copy:bowerFiles"
+        "copy:bowerCSS",
+        "copy:bowerJS"
     ]);
     //"clean:tmp"
 };

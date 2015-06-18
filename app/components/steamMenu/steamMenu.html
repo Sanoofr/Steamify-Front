@@ -1,0 +1,21 @@
+<div id="steamMenu">
+    <div class="titre">Menu</div>
+    <ul class="nav nav-pills nav-stacked">
+        <li role="presentation" class="active"><a href="#">Home</a></li>
+        <li role="presentation"><a href="#">Profile</a></li>
+        <li role="presentation"><a href="#">Messages</a></li>
+        <li role="presentation">
+            <a href="#" ng-click="steamMenu.isCollapsed = !steamMenu.isCollapsed">Collapse</a>
+            <div collapse="steamMenu.isCollapsed">
+                <ul class="nav nav-pills nav-stacked">
+                    <li role="presentation"><a href="#">Link Collapse</a></li>
+                    <li role="presentation"><a href="#">Link Collapse</a></li>
+                    <li role="presentation"><a href="#">Link Collapse</a></li>
+                    <li role="presentation"><a href="#">Link Collapse</a></li>
+                </ul>
+            </div>
+        </li>
+        <li role="presentation"><a href="#">Link</a></li>
+        <li role="presentation"><a href="#">Link</a></li>
+    </ul>
+</div>
