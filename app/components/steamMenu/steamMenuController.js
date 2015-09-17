@@ -1,5 +1,5 @@
 angular.module('Steamify').controller('SteamMenuController',
-    function ($scope) {
+    function () {
         var ctrl = this;
         ctrl.isCollapsed = true;
     }

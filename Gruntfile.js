@@ -56,6 +56,19 @@ module.exports = function (grunt) {
                 src: [
                     'app/**/*.css'
                 ],
+                dest: 'dist/style-css.css'
+            },
+            sass: {
+                src: [
+                    'app/**/*.scss'
+                ],
+                dest: 'dist/style-scss.scss'
+            },
+            'sass-css': {
+                src: [
+                    'dist/style-scss.css',
+                    'dist/style-css.css'
+                ],
                 dest: 'dist/style.css'
             },
             'js-not-min': {
@@ -108,14 +121,27 @@ module.exports = function (grunt) {
                 }
             }
         },
+        sass: {
+            dist: {
+                options: {
+                    sourcemap: "none",
+                    style: "expanded"
+                },
+                files: [
+                    {
+                        'dist/style-scss.css': 'dist/style-scss.scss'
+                    }
+                ]
+            }
+        },
         watch: {
             html: {
                 files: ['app/**/*.html'],
                 tasks: ['ngtemplates']
             },
             css: {
-                files: ['app/**/*.css'],
-                tasks: ['concat:css', 'autoprefixer', 'cssmin', "csslint", 'clean:end-build']
+                files: ['app/**/*.css', 'app/**/*.scss'],
+                tasks: ['generateCSS']
             },
             js: {
                 files: ['app/**/*.js'],
@@ -125,7 +151,7 @@ module.exports = function (grunt) {
                 }
             },
             livereload: {
-                files: ['dist/*.min.*'],
+                files: ['dist/*.min.*', 'index.html'],
                 options: {livereload: true}
             }
         },
@@ -162,7 +188,13 @@ module.exports = function (grunt) {
         clean: {
             tmp: ["tmp/"],
             dist: ["dist/"],
-            "end-build": ['dist/style.css', 'dist/script.js']
+            "end-build": [
+                'dist/style.css',
+                'dist/script.js',
+                'dist/style-css.css',
+                'dist/style-scss.css',
+                'dist/style-scss.scss'
+            ]
         },
         express: {
             dev: {
@@ -173,36 +205,60 @@ module.exports = function (grunt) {
             }
         },
         sro_create_angular_components: {
-            Steamify: {
+            website: {
                 views: [
-                    "app/views/home"
+                    "app/views/home",
+                    "app/views/home2"
                 ],
                 directives: [
                     "app/components/steamHeader",
                     "app/components/steamMenu",
                     "app/components/steamFriends"
                 ]
+            },
+            options: {
+                initServiceController: true,
+                cssSuffix: "scss"
             }
         }
     });
 
-    grunt.registerTask('default', [
-        'clean:dist',
-        'concat:css',
-        'concat:js-not-min',
-        'autoprefixer',
-        'cssmin',
+
+//Sub TASK
+    grunt.registerTask("generateJS", [
         'ngtemplates',
+        'concat:js-not-min',
         'ngAnnotate',
         'uglify:js',
         'concat:js-min',
-        'clean:end-build',
-        'csslint',
-        'jshint'
+        'clean:end-build'
+    ]);
+
+    grunt.registerTask("generateCSS", [
+        'concat:sass',
+        'concat:css',
+        'sass',
+        'concat:sass-css',
+        'autoprefixer',
+        'cssmin',
+        'clean:end-build'
     ]);
 
     grunt.registerTask('generate files', [
         'sro_create_angular_components'
+    ]);
+
+//TASK
+    grunt.registerTask('bower-task', [
+        "bower",
+        "copy:bowerCSS",
+        "copy:bowerJS"
+    ]);
+
+    grunt.registerTask('default', [
+        'clean:dist',
+        'generateCSS',
+        'generateJS'
     ]);
 
     grunt.registerTask('default + watch', [
@@ -216,11 +272,4 @@ module.exports = function (grunt) {
         'watch'
     ]);
 
-    grunt.registerTask('bower-task', [
-        "bower",
-        "copy:bowerCSS",
-        "copy:bowerJS"
-    ]);
-    //"clean:tmp"
 };
-
