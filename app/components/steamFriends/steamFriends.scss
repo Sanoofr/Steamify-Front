@@ -1,4 +1,60 @@
 #steamFriends {
-    background-color: #0086b3;
-    height: 500px;
+  height: $panneau-height;
+  width: $panneau-width;
+  background-color: $panneau-bgColor;
+  box-shadow: $panneau-shadow;
+  font-size: small;
+  overflow-y: scroll;
+
+  .avatar {
+    vertical-align: top;
+    padding-right: 5px;
+  }
+
+  .friend {
+    display: inline-block;
+    margin-top: 0px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  .inGame {
+    color: #1cd51c;
+  }
+
+  .noGame {
+    color: #4a88e8;
+  }
+
+  .horsLigne {
+    color: #adaead;
+  }
+
+  .list-group-item {
+    background-color: transparent;
+    border: none;
+  }
+}
+
+#steamFriends::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+#steamFriends::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+#steamFriends::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
+.fade-animation.ng-enter {
+  animation: slideInLeft 1s;
+}
+
+.fade-animation.ng-leave {
+  animation: slideOutLeft 1s;
 }

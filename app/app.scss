@@ -1,0 +1,20 @@
+/* -------------------------
+ * --------VARIABLES--------
+ * ------------------------- */
+
+/* Les panneaux */
+$panneau-height: 800px;
+$panneau-width: 100%;
+$panneau-bgColor: #4c4d4c;
+$panneau-shadow: inset -30px -1px 50px -10px #393a39;
+
+/* -------------------------
+ * ---------COMMUNS---------
+ * ------------------------- */
+html {
+  background-color: #4c4d4c;
+}
+
+div:first-child {
+  opacity: .99;
+}

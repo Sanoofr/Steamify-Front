@@ -1,1 +1,20 @@
-<div id="steamFriends"></div>
+<div id="steamFriends" ng-if="steamFriends.friend==true"
+     class="fade-animation">
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="friend in steamFriends.listFriends" tabindex="1">
+            <img src="{{friend.avatar}}" class="avatar">
+
+            <div class="friend">
+                <div><a href="#"
+                        ng-class="friend.idGame>0?'inGame':(friend.statut ==='Hors Ligne'?'horsLigne':'noGame')">{{friend.pseudo}}</a>
+                </div>
+                <div><a href="#"
+                        ng-class="friend.idGame>0?'inGame':(friend.statut ==='Hors Ligne'?'horsLigne':'noGame')">{{friend.statut}}</a>
+                </div>
+                <div><a href="#"
+                        ng-class="friend.idGame>0?'inGame':(friend.statut ==='Hors Ligne'?'horsLigne':'noGame')">{{friend.game}}</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

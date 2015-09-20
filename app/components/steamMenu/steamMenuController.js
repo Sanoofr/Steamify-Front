@@ -1,6 +1,10 @@
 angular.module('Steamify').controller('SteamMenuController',
-    function () {
-        var ctrl = this;
-        ctrl.isCollapsed = true;
+    function ($rootScope) {
+        var ctrlSM = this;
+        ctrlSM.isCollapsed = true;
+
+        ctrlSM.showFriend = function () {
+            $rootScope.$broadcast('showFriend');
+        };
     }
 );

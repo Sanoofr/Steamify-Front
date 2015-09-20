@@ -1,10 +1,6 @@
 #steamMenu {
-    background-color: #00d6b2;
-    height: 500px;
-}
-
-#steamMenu .titre{
-    background-color: #0086b3;
-    height: 30px;
-
+  height: $panneau-height;
+  width: $panneau-width;
+  background-color: $panneau-bgColor;
+  box-shadow: $panneau-shadow;
 }
