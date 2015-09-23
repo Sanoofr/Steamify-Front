@@ -5,4 +5,5 @@ app/vendors/
 app/templates.js
 node_modules/
 dist/
+/.sass-cache
 tmp/
