@@ -15,6 +15,17 @@ html {
   background-color: #4c4d4c;
 }
 
+.panneauHead {
+  height: 30px;
+  background: repeating-linear-gradient(-55deg, #4c4d4c, #4c4d4c 5px, #333 5px, #333 10px);
+  border-bottom: solid 3px #333;
+  border-right: solid 3px #333;
+  color: white;
+  padding-left: 10%;
+  padding-top: 5px;
+  box-shadow: $panneau-shadow;
+}
+
 div:first-child {
   opacity: .99;
 }

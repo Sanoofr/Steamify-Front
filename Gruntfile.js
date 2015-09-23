@@ -205,7 +205,7 @@ module.exports = function (grunt) {
             }
         },
         sro_create_angular_components: {
-            website: {
+            Steamify: {
                 views: [
                     "app/views/home",
                     "app/views/home2"
@@ -213,11 +213,14 @@ module.exports = function (grunt) {
                 directives: [
                     "app/components/steamHeader",
                     "app/components/steamMenu",
-                    "app/components/steamFriends"
+                    "app/components/steamFriends",
+                    "app/components/steamProfil",
+                    "app/components/steamGame",
+                    "app/components/steamSucces"
                 ]
             },
             options: {
-                initServiceController: true,
+                initServiceController: false,
                 cssSuffix: "scss"
             }
         }

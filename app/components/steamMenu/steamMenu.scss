@@ -3,4 +3,6 @@
   width: $panneau-width;
   background-color: $panneau-bgColor;
   box-shadow: $panneau-shadow;
+  position: relative;
+  z-index: 100;
 }
