@@ -1,4 +1,4 @@
-angular.module('Steamify').service('SteamFriendsService',
+angular.module('Steamify').service('SteamContactsService',
     function () {
 
         this.listFriend = [
