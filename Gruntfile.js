@@ -213,7 +213,7 @@ module.exports = function (grunt) {
                 directives: [
                     "app/components/steamHeader",
                     "app/components/steamMenu",
-                    "app/components/steamFriends",
+                    "app/components/steamContacts",
                     "app/components/steamProfil",
                     "app/components/steamGame",
                     "app/components/steamSucces"
