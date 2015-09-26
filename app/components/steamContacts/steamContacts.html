@@ -1,19 +1,18 @@
-<div id="steamContacts" ng-if="steamContacts.friend==true"
-     class="fade-animation">
+<div class="steamContacts" ng-if="steamContacts.friend==true">
     <div class="panneauHead">Friends</div>
     <ul class="list-group">
-        <li class="list-group-item" ng-repeat="friend in steamContacts.listFriends" tabindex="1">
+        <li class="list-group-item" ng-repeat="contact in steamContacts.listFriends" tabindex="1">
             <img src="{{contact.avatar}}" class="avatar">
 
             <div class="friend">
                 <div><a href="#"
-                        ng-class="steamContacts.ihmStatutContact(friend)" ng-click="steamContacts.showProfil(true)">{{contact.pseudo}}</a>
+                        ng-class="steamContacts.ihmStatutContact(contact)" ng-click="steamContacts.showProfil(true)">{{contact.pseudo}}</a>
                 </div>
                 <div><a href="#"
-                        ng-class="steamContacts.ihmStatutContact(friend)">{{contact.statut}}</a>
+                        ng-class="steamContacts.ihmStatutContact(contact)">{{contact.statut}}</a>
                 </div>
                 <div><a href="#"
-                        ng-class="steamContacts.ihmStatutContact(friend)">{{contact.game}}</a>
+                        ng-class="steamContacts.ihmStatutContact(contact)">{{contact.game}}</a>
                 </div>
             </div>
         </li>

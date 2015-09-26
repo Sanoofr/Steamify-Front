@@ -1,5 +1,9 @@
-#steamHeader {
+.steamHeader {
   height: 100px;
+  width: 100%;
   background-color: $panneau-bgColor;
+  background-image: url("http://itspeachagain.yolasite.com/resources/The-Cheshire-Cat-Banner-alice-in-wonderland-2010-10724350-800-100.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   border-bottom: solid 3px #333;
 }

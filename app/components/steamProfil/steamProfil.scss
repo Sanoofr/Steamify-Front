@@ -1,21 +1,13 @@
-#steamProfil {
+.steamProfil {
   position: relative;
   z-index: 25;
   box-shadow: $panneau-shadow;
   height: $panneau-height;
 
+  @extend .slidePanneau;
 }
 
 .contenu {
-  overflow: hidden;
-  overflow-y: scroll;
-  height: calc(100% - 30px);
+  @extend .scrollbarPanneau;
 }
 
-.fade-animation.ng-enter {
-  animation: slideInLeft 1s;
-}
-
-.fade-animation.ng-leave {
-  animation: slideOutLeft 1s;
-}
