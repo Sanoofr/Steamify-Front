@@ -1,126 +1,372 @@
 angular.module('Steamify').service('SteamContactsService',
     function () {
 
-        this.listFriend = [
+        this.listContact = [
             {
-                idSteam: 1,
-                avatar: "http://placehold.it/50x50",
-                pseudo: "San Zos",
-                statut: "Dans un jeu",
-                game: "Isaac",
-                idGame: 1
-            }, {
-                idSteam: 2,
-                avatar: "http://placehold.it/50x50",
-                pseudo: "Dalninuk",
-                statut: "En ligne",
-                game: "",
-                idGame: 0
-            }, {
-                idSteam: 3,
-                avatar: "http://placehold.it/50x50",
-                pseudo: "Yuk",
-                statut: "Absent",
-                game: "",
-                idGame: 0
-            }, {
-                idSteam: 4,
-                avatar: "http://placehold.it/50x50",
-                pseudo: "Aeden",
-                statut: "Hors Ligne",
-                game: "",
-                idGame: 0
-            }
+                "steamid": "76561197961838416",
+                "relationship": "friend",
+                "friend_since": 1409868882,
+                "communityvisibilitystate": 1,
+                "profilestate": 1,
+                "personaname": "Yuk",
+                "lastlogoff": 1443311028,
+                "profileurl": "http://steamcommunity.com/profiles/76561197961838416/",
+                "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/c6/c67436b11e3bfe8cdd32d6a93f713714126425d2.jpg",
+                "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/c6/c67436b11e3bfe8cdd32d6a93f713714126425d2_medium.jpg",
+                "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/c6/c67436b11e3bfe8cdd32d6a93f713714126425d2_full.jpg",
+                "personastate": 0
+            },
+            {
+                "steamid": "76561197973989714",
+                "relationship": "friend",
+                "friend_since": 1377639489,
+                "communityvisibilitystate": 1,
+                "profilestate": 1,
+                "personaname": "Coyote Fr",
+                "lastlogoff": 1440802246,
+                "profileurl": "http://steamcommunity.com/profiles/76561197973989714/",
+                "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/8f/8f2d1d5bed7bbb49b98d4ae77dc1cfaf351084d6.jpg",
+                "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/8f/8f2d1d5bed7bbb49b98d4ae77dc1cfaf351084d6_medium.jpg",
+                "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/8f/8f2d1d5bed7bbb49b98d4ae77dc1cfaf351084d6_full.jpg",
+                "personastate": 0
+            },
+            {
+                "steamid": "76561197975011537",
+                "relationship": "friend",
+                "friend_since": 1374262701,
+                "communityvisibilitystate": 3,
+                "profilestate": 1,
+                "personaname": "LosT SouL / Angelfire",
+                "lastlogoff": 1435880956,
+                "profileurl": "http://steamcommunity.com/profiles/76561197975011537/",
+                "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/52/52819fa99a71f4bc0c7037d68deb71467d22490a.jpg",
+                "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/52/52819fa99a71f4bc0c7037d68deb71467d22490a_medium.jpg",
+                "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/52/52819fa99a71f4bc0c7037d68deb71467d22490a_full.jpg",
+                "personastate": 0
+                //"timecreated": 1111515498,
+                //"personastateflags": 0,
+                //"loccountrycode": "FR",
+                //"locstatecode": "B5",
+                //"loccityid": 16275
+            },
+            {
+                "steamid": "76561197978388300",
+                "relationship": "friend",
+                "friend_since": 1295818222,
+                "communityvisibilitystate": 3,
+                "profilestate": 1,
+                "personaname": "Warsong",
+                "lastlogoff": 1439569927,
+                "profileurl": "http://steamcommunity.com/profiles/76561197978388300/",
+                "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb.jpg",
+                "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg",
+                "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
+                "personastate": 0
+                //"primaryclanid": "103582791430447876",
+                //"timecreated": 1128099399,
+                //"personastateflags": 0,
+                //"loccountrycode": "FX"
+            },
+            {
+                "steamid": "76561197985968977",
+                "relationship": "friend",
+                "friend_since": 1385709853,
+                "communityvisibilitystate": 3,
+                "profilestate": 1,
+                "personaname": "Dalninuk",
+                "lastlogoff": 1443339149,
+                //"commentpermission": 1,
+                "profileurl": "http://steamcommunity.com/profiles/76561197985968977/",
+                "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/ff/ff8abf5fe439cc684f7c46b3ddbd1bf9e89d5dfa.jpg",
+                "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/ff/ff8abf5fe439cc684f7c46b3ddbd1bf9e89d5dfa_medium.jpg",
+                "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/ff/ff8abf5fe439cc684f7c46b3ddbd1bf9e89d5dfa_full.jpg",
+                "personastate": 1
+                //"primaryclanid": "103582791429650825",
+                //"timecreated": 1162939212,
+                //"personastateflags": 0
+            },
+            {
+                "steamid": "76561197996778182",
+                "relationship": "friend",
+                "friend_since": 1374001301,
+                "communityvisibilitystate": 3,
+                "profilestate": 1,
+                "personaname": "San Zos",
+                "lastlogoff": 1443285218,
+                "profileurl": "http://steamcommunity.com/id/SanZos/",
+                "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/33/333e47bd5380ffcb0fab4cac58587ef9dd667c23.jpg",
+                "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/33/333e47bd5380ffcb0fab4cac58587ef9dd667c23_medium.jpg",
+                "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/33/333e47bd5380ffcb0fab4cac58587ef9dd667c23_full.jpg",
+                "personastate": 1
+                //"realname": "Antonin DUBOIS",
+                //"primaryclanid": "103582791430287257",
+                //"timecreated": 1203624120,
+                //"personastateflags": 0,
+                //"loccountrycode": "FR",
+                //"locstatecode": "B5",
+                //"loccityid": 16109
+            },
+            {
+                "steamid": "76561198001182892",
+                "relationship": "friend",
+                "friend_since": 1440771029,
+                "communityvisibilitystate": 3,
+                "profilestate": 1,
+                "personaname": "Aeden",
+                "lastlogoff": 1443297807,
+                "profileurl": "http://steamcommunity.com/id/aeden/",
+                "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/35/35c93ed95108fde69373e526c1a7b0724e5c45cd.jpg",
+                "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/35/35c93ed95108fde69373e526c1a7b0724e5c45cd_medium.jpg",
+                "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/35/35c93ed95108fde69373e526c1a7b0724e5c45cd_full.jpg",
+                "personastate": 1,
+                //"realname": "Florent B",
+                //"primaryclanid": "103582791434934673",
+                //"timecreated": 1221229825,
+                //"personastateflags": 0,
+                "gameextrainfo": "Type:Rider",
+                "gameid": "258890"
+            },
+            {
+                "steamid": "76561198002566134",
+                "relationship": "friend",
+                "friend_since": 1438962631,
+                "communityvisibilitystate": 1,
+                "profilestate": 1,
+                "personaname": "KeydeeGamerBoy",
+                "lastlogoff": 1443129647,
+                "profileurl": "http://steamcommunity.com/id/keydeegamerboy/",
+                "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/6c/6ca7b926b4068722a073a719fec4edb85e249b81.jpg",
+                "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/6c/6ca7b926b4068722a073a719fec4edb85e249b81_medium.jpg",
+                "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/6c/6ca7b926b4068722a073a719fec4edb85e249b81_full.jpg",
+                "personastate": 0
+            },
+            {
+                "steamid": "76561198003124350",
+                "relationship": "friend",
+                "friend_since": 1401481718,
+                "communityvisibilitystate": 3,
+                "profilestate": 1,
+                "personaname": "Sherpak",
+                "lastlogoff": 1438706215,
+                "profileurl": "http://steamcommunity.com/profiles/76561198003124350/",
+                "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/73/7329005323aab55f41393058384df33fac99da46.jpg",
+                "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/73/7329005323aab55f41393058384df33fac99da46_medium.jpg",
+                "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/73/7329005323aab55f41393058384df33fac99da46_full.jpg",
+                "personastate": 0
+                //"primaryclanid": "103582791429521408",
+                //"timecreated": 1227316329,
+                //"personastateflags": 0,
+                //"loccountrycode": "FX"
+            },
+            {
+                "steamid": "76561198014553621",
+                "relationship": "friend",
+                "friend_since": 1407519966,
+                "communityvisibilitystate": 3,
+                "profilestate": 1,
+                "personaname": "SLY",
+                "lastlogoff": 1438021205,
+                "profileurl": "http://steamcommunity.com/profiles/76561198014553621/",
+                "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/02/0261951159de6613a59f723f7bfb1238ca3355f2.jpg",
+                "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/02/0261951159de6613a59f723f7bfb1238ca3355f2_medium.jpg",
+                "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/02/0261951159de6613a59f723f7bfb1238ca3355f2_full.jpg",
+                "personastate": 0
+                //"realname": "terrien",
+                //"primaryclanid": "103582791429521408",
+                //"timecreated": 1255725531,
+                //"personastateflags": 0,
+                //"loccountrycode": "FR"
 
-            , {
-                idSteam: 1,
-                avatar: "http://placehold.it/50x50",
-                pseudo: "San Zos",
-                statut: "Dans un jeu",
-                game: "Isaac",
-                idGame: 1
-            }, {
-                idSteam: 2,
-                avatar: "http://placehold.it/50x50",
-                pseudo: "Dalninuk",
-                statut: "En ligne",
-                game: "",
-                idGame: 0
-            }, {
-                idSteam: 3,
-                avatar: "http://placehold.it/50x50",
-                pseudo: "Yuk",
-                statut: "Absent",
-                game: "",
-                idGame: 0
-            }, {
-                idSteam: 4,
-                avatar: "http://placehold.it/50x50",
-                pseudo: "Aeden",
-                statut: "Hors Ligne",
-                game: "",
-                idGame: 0
-            }, {
-                idSteam: 1,
-                avatar: "http://placehold.it/50x50",
-                pseudo: "San Zos",
-                statut: "Dans un jeu",
-                game: "Isaac",
-                idGame: 1
-            }, {
-                idSteam: 2,
-                avatar: "http://placehold.it/50x50",
-                pseudo: "Dalninuk",
-                statut: "En ligne",
-                game: "",
-                idGame: 0
-            }, {
-                idSteam: 3,
-                avatar: "http://placehold.it/50x50",
-                pseudo: "Yuk",
-                statut: "Absent",
-                game: "",
-                idGame: 0
-            }, {
-                idSteam: 4,
-                avatar: "http://placehold.it/50x50",
-                pseudo: "Aeden",
-                statut: "Hors Ligne",
-                game: "",
-                idGame: 0
-            }, {
-                idSteam: 1,
-                avatar: "http://placehold.it/50x50",
-                pseudo: "San Zos",
-                statut: "Dans un jeu",
-                game: "Isaac",
-                idGame: 1
-            }, {
-                idSteam: 2,
-                avatar: "http://placehold.it/50x50",
-                pseudo: "Dalninuk",
-                statut: "En ligne",
-                game: "",
-                idGame: 0
-            }, {
-                idSteam: 3,
-                avatar: "http://placehold.it/50x50",
-                pseudo: "Yuk",
-                statut: "Absent",
-                game: "",
-                idGame: 0
-            }, {
-                idSteam: 4,
-                avatar: "http://placehold.it/50x50",
-                pseudo: "Aeden",
-                statut: "Hors Ligne",
-                game: "",
-                idGame: 0
+            },
+            {
+                "steamid": "76561198029043403",
+                "relationship": "friend",
+                "friend_since": 1412116217,
+                "communityvisibilitystate": 3,
+                "profilestate": 1,
+                "personaname": "At0mium",
+                "lastlogoff": 1443192662,
+                "profileurl": "http://steamcommunity.com/profiles/76561198029043403/",
+                "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fb/fb933d5a5d9e757c883e764f8127a9f3f9efe077.jpg",
+                "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fb/fb933d5a5d9e757c883e764f8127a9f3f9efe077_medium.jpg",
+                "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fb/fb933d5a5d9e757c883e764f8127a9f3f9efe077_full.jpg",
+                "personastate": 0
+                //"primaryclanid": "103582791432286642",
+                //"timecreated": 1281895484,
+                //"personastateflags": 0,
+                //"loccountrycode": "FX"
+            },
+            {
+                "steamid": "76561198040868705",
+                "relationship": "friend",
+                "friend_since": 1409920149,
+                "communityvisibilitystate": 3,
+                "profilestate": 1,
+                "personaname": "Liv",
+                "lastlogoff": 1441836553,
+                "profileurl": "http://steamcommunity.com/profiles/76561198040868705/",
+                "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/15/15cad42078f2720da28693e2756ef76f8b0a793c.jpg",
+                "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/15/15cad42078f2720da28693e2756ef76f8b0a793c_medium.jpg",
+                "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/15/15cad42078f2720da28693e2756ef76f8b0a793c_full.jpg",
+                "personastate": 0
+                //"primaryclanid": "103582791429521408",
+                //"timecreated": 1303322970,
+                //"personastateflags": 0
+            },
+            {
+                "steamid": "76561198042297826",
+                "relationship": "friend",
+                "friend_since": 1420214169,
+                "communityvisibilitystate": 3,
+                "profilestate": 1,
+                "personaname": "KumaCreep",
+                "lastlogoff": 1443198369,
+                //"commentpermission": 1,
+                "profileurl": "http://steamcommunity.com/id/KumaCreep/",
+                "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/9b/9bc5c74aee8bf34328f543b6ea2fe84973b5cbd7.jpg",
+                "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/9b/9bc5c74aee8bf34328f543b6ea2fe84973b5cbd7_medium.jpg",
+                "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/9b/9bc5c74aee8bf34328f543b6ea2fe84973b5cbd7_full.jpg",
+                "personastate": 0
+                //"realname": "Kuma Creep",
+                //"primaryclanid": "103582791435811350",
+                //"timecreated": 1306148043,
+                //"personastateflags": 0,
+                //"loccountrycode": "FR",
+                //"locstatecode": "B8",
+                //"loccityid": 16046
+            },
+            {
+                "steamid": "76561198051840994",
+                "relationship": "friend",
+                "friend_since": 1377636339,
+                "communityvisibilitystate": 3,
+                "profilestate": 1,
+                "personaname": "Lelouch44",
+                "lastlogoff": 1443207633,
+                "profileurl": "http://steamcommunity.com/profiles/76561198051840994/",
+                "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/c0/c09a7d54368385e2ec7e0644c7574d98822deb06.jpg",
+                "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/c0/c09a7d54368385e2ec7e0644c7574d98822deb06_medium.jpg",
+                "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/c0/c09a7d54368385e2ec7e0644c7574d98822deb06_full.jpg",
+                "personastate": 0
+                //"primaryclanid": "103582791433400678",
+                //"timecreated": 1320482463,
+                //"personastateflags": 0,
+                //"loccountrycode": "FR",
+                //"locstatecode": "B5",
+                //"loccityid": 16198
+            },
+            {
+                "steamid": "76561198070877961",
+                "relationship": "friend",
+                "friend_since": 1380657194,
+                "communityvisibilitystate": 3,
+                "profilestate": 1,
+                "personaname": "kentsubattle",
+                "lastlogoff": 1442559966,
+                "profileurl": "http://steamcommunity.com/profiles/76561198070877961/",
+                "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/7c/7c0a5acb73e864144c8fb5efee402bfb02b55e64.jpg",
+                "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/7c/7c0a5acb73e864144c8fb5efee402bfb02b55e64_medium.jpg",
+                "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/7c/7c0a5acb73e864144c8fb5efee402bfb02b55e64_full.jpg",
+                "personastate": 0
+                //"primaryclanid": "103582791429521408",
+                //"timecreated": 1346773258,
+                //"personastateflags": 0
+            },
+            {
+                "steamid": "76561198076375446",
+                "relationship": "friend",
+                "friend_since": 1437069050,
+                "communityvisibilitystate": 3,
+                "profilestate": 1,
+                "personaname": "Artefax",
+                "lastlogoff": 1443072723,
+                "profileurl": "http://steamcommunity.com/profiles/76561198076375446/",
+                "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/e3/e37b48d325d4bff6f59ecdf83c4175d214e6fd4f.jpg",
+                "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/e3/e37b48d325d4bff6f59ecdf83c4175d214e6fd4f_medium.jpg",
+                "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/e3/e37b48d325d4bff6f59ecdf83c4175d214e6fd4f_full.jpg",
+                "personastate": 0
+                //"realname": "Wam",
+                //"primaryclanid": "103582791434070573",
+                //"timecreated": 1353507628,
+                //"personastateflags": 0
+            },
+            {
+                "steamid": "76561198099791326",
+                "relationship": "friend",
+                "friend_since": 1433414945,
+                "communityvisibilitystate": 3,
+                "profilestate": 1,
+                "personaname": "korrigan",
+                "lastlogoff": 1443364001,
+                "profileurl": "http://steamcommunity.com/profiles/76561198099791326/",
+                "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/2b/2bc85fce157b5fb8eb6c510cef0e771f1cb0eff1.jpg",
+                "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/2b/2bc85fce157b5fb8eb6c510cef0e771f1cb0eff1_medium.jpg",
+                "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/2b/2bc85fce157b5fb8eb6c510cef0e771f1cb0eff1_full.jpg",
+                "personastate": 0
+                //"primaryclanid": "103582791429521408",
+                //"timecreated": 1374690667,
+                //"personastateflags": 0,
+                //"loccountrycode": "FR",
+                //"locstatecode": "B5"
+            },
+            {
+                "steamid": "76561198102899163",
+                "relationship": "friend",
+                "friend_since": 1394138587,
+                "communityvisibilitystate": 1,
+                "profilestate": 1,
+                "personaname": "Valdo",
+                "lastlogoff": 1442868754,
+                "profileurl": "http://steamcommunity.com/profiles/76561198102899163/",
+                "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb.jpg",
+                "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg",
+                "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
+                "personastate": 0
+            },
+            {
+                "steamid": "76561198188480828",
+                "relationship": "friend",
+                "friend_since": 1422721266,
+                "communityvisibilitystate": 3,
+                "personaname": "mirat",
+                "lastlogoff": 1425433229,
+                "profileurl": "http://steamcommunity.com/profiles/76561198188480828/",
+                "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb.jpg",
+                "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg",
+                "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
+                "personastate": 0
+                //"primaryclanid": "103582791429521408",
+                //"timecreated": 1411733380,
+                //"personastateflags": 0
+            },
+            {
+                "steamid": "76561198232293044",
+                "relationship": "friend",
+                "friend_since": 1440625527,
+                "communityvisibilitystate": 3,
+                "profilestate": 1,
+                "personaname": "drumolive",
+                "lastlogoff": 1443339144,
+                "profileurl": "http://steamcommunity.com/profiles/76561198232293044/",
+                "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fd/fd4eb830996666a1f32280771c3180cb46da0bad.jpg",
+                "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fd/fd4eb830996666a1f32280771c3180cb46da0bad_medium.jpg",
+                "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fd/fd4eb830996666a1f32280771c3180cb46da0bad_full.jpg",
+                "personastate": 3,
+                //"realname": "Olivier Tullio",
+                //"primaryclanid": "103582791429521408",
+                //"timecreated": 1433668629,
+                //"personastateflags": 0,
+                "gameextrainfo": "Rust",
+                "gameid": "252490"
+                //"loccountrycode": "FR",
+                //"locstatecode": "B5",
+                //"loccityid": 16109
             }
         ];
 
         this.getDonnees = function getDonnees() {
-            return this.listFriend;
+            return this.listContact;
         };
     }
-);
+)
+;

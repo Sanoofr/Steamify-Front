@@ -6,13 +6,14 @@
 
             <div class="friend">
                 <div><a href="#"
-                        ng-class="steamContacts.ihmStatutContact(contact)" ng-click="steamContacts.showProfil(true)">{{contact.pseudo}}</a>
+                        ng-class="steamContacts.ihmStatutContact(contact)"
+                        ng-click="steamContacts.showProfil(true,contact.profileurl)">{{contact.personaname}}</a>
                 </div>
                 <div><a href="#"
-                        ng-class="steamContacts.ihmStatutContact(contact)">{{contact.statut}}</a>
+                        ng-class="steamContacts.ihmStatutContact(contact)">{{steamContacts.getStatut(contact.personastate)}}</a>
                 </div>
                 <div><a href="#"
-                        ng-class="steamContacts.ihmStatutContact(contact)">{{contact.game}}</a>
+                        ng-class="steamContacts.ihmStatutContact(contact)">{{contact.gameextrainfo}}</a>
                 </div>
             </div>
         </li>
